@@ -1,0 +1,22 @@
+@layer theme, base, mantine, utilities;
+
+@import 'tailwindcss';
+
+@import '@mantine/core/styles.layer.css';
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: theme('fontFamily.sans'), system-ui, sans-serif;
+  background-color: theme('colors.background', '#fff');
+  color: theme('colors.foreground', '#222');
+}
