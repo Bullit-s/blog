@@ -7,11 +7,15 @@ export const Route = createFileRoute('/')({
 });
 
 function IndexComponent() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const switchLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
+  }
 
   return (
     <Flex gap="md" align="center">
-      <Button>{t('switchLanguage')}</Button>
+      <Button onClick={switchLanguage}>{t('switchLanguage')}</Button>
       <Text>{t('hello')}</Text>
     </Flex>
   );

@@ -9,7 +9,7 @@ export const Route = createRootRouteWithContext()({
 
 function RootComponent() {
   return (
-    <MantineProvider defaultColorScheme="dark" classNamesPrefix="ui" theme={() => {}}>
+    <MantineProvider defaultColorScheme="dark" classNamesPrefix="ui">
       <AppLayout>
         <Outlet key="Outlet" />
         <TanStackRouterDevtools position="bottom-right" />
